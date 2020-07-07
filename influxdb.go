@@ -12,9 +12,9 @@ import (
 
 	influx "github.com/influxdata/influxdb1-client/v2"
 	"github.com/pkg/errors"
-	"github.com/unifi-poller/poller"
+	"github.com/unifi-poller/poller/pkg/poller"
+	"github.com/unifi-poller/poller/pkg/webserver"
 	"github.com/unifi-poller/unifi"
-	"github.com/unifi-poller/webserver"
 	"golift.io/cnfg"
 )
 
