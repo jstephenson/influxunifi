@@ -6,6 +6,7 @@ import (
 	"crypto/tls"
 	"io/ioutil"
 	"log"
+	"reflect"
 	"strconv"
 	"strings"
 	"time"
@@ -65,6 +66,7 @@ func init() { // nolint: gochecknoinits
 
 	poller.NewOutput(&poller.Output{
 		Name:   PluginName,
+		Path:   reflect.TypeOf(Config{}).PkgPath(),
 		Config: u.InfluxDB,
 		Method: u.Run,
 	})
